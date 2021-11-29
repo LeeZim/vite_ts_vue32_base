@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { ref, defineProps } from 'vue'
+import useMousePosition from '@/hooks/useMousePosition'
 
 defineProps<{ msg: string }>()
-
+const { x, y } = useMousePosition()
 const count = ref(0)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <h1>X: {{ x }}, Y: {{ y }}</h1>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
