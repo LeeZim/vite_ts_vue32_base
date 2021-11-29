@@ -913,6 +913,18 @@
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
+"cz-customizable@^6.3.0":
+  "integrity" "sha1-GyTluE4fzKoYrYN2ErIzuMUdeII="
+  "resolved" "https://registry.npmmirror.com/cz-customizable/download/cz-customizable-6.3.0.tgz"
+  "version" "6.3.0"
+  dependencies:
+    "editor" "1.0.0"
+    "find-config" "^1.0.0"
+    "inquirer" "^6.3.1"
+    "lodash" "^4.17.19"
+    "temp" "^0.9.0"
+    "word-wrap" "^1.2.3"
+
 "dayjs@^1.10.7":
   "integrity" "sha1-LPX5Gt0oEWdIRAhmoKHSbzps5Gg="
   "resolved" "https://registry.npmmirror.com/dayjs/download/dayjs-1.10.7.tgz"
@@ -1052,6 +1064,11 @@
     "dom-serializer" "^1.0.1"
     "domelementtype" "^2.2.0"
     "domhandler" "^4.2.0"
+
+"editor@1.0.0":
+  "integrity" "sha1-YMf4e9YrzGqJT6jM1q+3gjok90I="
+  "resolved" "https://registry.npmmirror.com/editor/download/editor-1.0.0.tgz"
+  "version" "1.0.0"
 
 "element-plus@^1.2.0-beta.4":
   "integrity" "sha512-wYOwa/Zop5xMqhqkS7jOd32FF0Y2IpquIu8JLMbmvwlWvRUVetE5RO5lvxiF6etZgq8urRVttisXnOzJ9YOItQ=="
@@ -1471,6 +1488,13 @@
   dependencies:
     "to-regex-range" "^5.0.1"
 
+"find-config@^1.0.0":
+  "integrity" "sha1-6vorm8B/qckOmgw++c7PHMgA9TA="
+  "resolved" "https://registry.npmmirror.com/find-config/download/find-config-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "user-home" "^2.0.0"
+
 "find-node-modules@^2.1.2":
   "integrity" "sha1-V1ZaNFW69nG4NbxrITSpuTi5xTw="
   "resolved" "https://registry.npmmirror.com/find-node-modules/download/find-node-modules-2.1.2.tgz"
@@ -1775,7 +1799,7 @@
   "resolved" "https://registry.npmmirror.com/ini/download/ini-1.3.8.tgz"
   "version" "1.3.8"
 
-"inquirer@6.5.2":
+"inquirer@^6.3.1", "inquirer@6.5.2":
   "integrity" "sha1-rVCUI3XQNtMn/1KMCL1fqwiZKMo="
   "resolved" "https://registry.npmmirror.com/inquirer/download/inquirer-6.5.2.tgz?cache=0&sync_timestamp=1633472902265&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Finquirer%2Fdownload%2Finquirer-6.5.2.tgz"
   "version" "6.5.2"
@@ -2195,10 +2219,17 @@
   dependencies:
     "brace-expansion" "^1.1.7"
 
-"minimist@^1.2.0", "minimist@1.2.5":
+"minimist@^1.2.0", "minimist@^1.2.5", "minimist@1.2.5":
   "integrity" "sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI="
   "resolved" "https://registry.npmmirror.com/minimist/download/minimist-1.2.5.tgz"
   "version" "1.2.5"
+
+"mkdirp@^0.5.1":
+  "integrity" "sha1-2Rzv1i0UNsoPQWIOJRKI1CAJne8="
+  "resolved" "https://registry.npmmirror.com/mkdirp/download/mkdirp-0.5.5.tgz"
+  "version" "0.5.5"
+  dependencies:
+    "minimist" "^1.2.5"
 
 "mkdirp@~1.0.4":
   "integrity" "sha1-PrXtYmInVteaXw4qIh3+utdcL34="
@@ -2334,6 +2365,11 @@
     "prelude-ls" "^1.2.1"
     "type-check" "^0.4.0"
     "word-wrap" "^1.2.3"
+
+"os-homedir@^1.0.0":
+  "integrity" "sha1-/7xJiDNuDoM94MFox+8VISGqf7M="
+  "resolved" "https://registry.npmmirror.com/os-homedir/download/os-homedir-1.0.2.tgz"
+  "version" "1.0.2"
 
 "os-tmpdir@~1.0.2":
   "integrity" "sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ="
@@ -2664,6 +2700,13 @@
   dependencies:
     "glob" "^7.1.3"
 
+"rimraf@~2.6.2":
+  "integrity" "sha1-stEE/g2Psnz54KHNqCYt04M8bKs="
+  "resolved" "https://registry.npmmirror.com/rimraf/download/rimraf-2.6.3.tgz"
+  "version" "2.6.3"
+  dependencies:
+    "glob" "^7.1.3"
+
 "rollup@^2.50.0", "rollup@^2.57.0":
   "integrity" "sha512-akwfnpjY0rXEDSn1UTVfKXJhPsEBu+imi1gqBA1ZkHGydUnkV/fWCC90P7rDaLEW8KTwBcS1G3N4893Ndz+jwg=="
   "resolved" "https://registry.npmmirror.com/rollup/download/rollup-2.60.1.tgz?cache=0&sync_timestamp=1637567576726&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Frollup%2Fdownload%2Frollup-2.60.1.tgz"
@@ -2970,6 +3013,14 @@
   "resolved" "https://registry.npmmirror.com/supports-color/download/supports-color-9.2.1.tgz"
   "version" "9.2.1"
 
+"temp@^0.9.0":
+  "integrity" "sha1-zSCoWAy2NjXQ5OnUvZidRChudiA="
+  "resolved" "https://registry.npmmirror.com/temp/download/temp-0.9.4.tgz"
+  "version" "0.9.4"
+  dependencies:
+    "mkdirp" "^0.5.1"
+    "rimraf" "~2.6.2"
+
 "text-table@^0.2.0":
   "integrity" "sha1-f17oI66AUgfACvLfSoTsP8+lcLQ="
   "resolved" "https://registry.npmmirror.com/text-table/download/text-table-0.2.0.tgz"
@@ -3119,6 +3170,13 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"user-home@^2.0.0":
+  "integrity" "sha1-nHC/2Babwdy/SGBODwS4tJzenp8="
+  "resolved" "https://registry.npmmirror.com/user-home/download/user-home-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "os-homedir" "^1.0.0"
 
 "v8-compile-cache@^2.0.3":
   "integrity" "sha1-LeGWGMZtwkfc+2+ZM4A12CRaLO4="
