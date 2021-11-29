@@ -1,12 +1,14 @@
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, reactive, toRefs } from 'vue'
 
 function useMousePosition() {
-  const x = ref(0)
-  const y = ref(0)
+  const offset = reactive({
+    x: 0,
+    y: 0
+  })
 
   const updateMouse = (e: MouseEvent) => {
-    x.value = e.pageX
-    y.value = e.pageY
+    offset.x = e.pageX
+    offset.y = e.pageY
   }
 
   onMounted(() => {
@@ -17,7 +19,7 @@ function useMousePosition() {
     document.removeEventListener('click', updateMouse)
   })
 
-  return { x, y }
+  return { ...toRefs(offset) }
 }
 
 export default useMousePosition

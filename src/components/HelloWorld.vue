@@ -1,22 +1,45 @@
 <script setup lang="ts">
 import { ref, defineProps } from 'vue'
 import useMousePosition from '@/hooks/useMousePosition'
+import useURLLoader from '@/hooks/useURLLoader'
 
 defineProps<{ msg: string }>()
 const { x, y } = useMousePosition()
 const count = ref(0)
+
+interface dogData {
+  message: string
+  status: 'success' | 'failed'
+}
+
+interface catData {
+  breeds: []
+  id: string
+  url: string
+  width: number
+  height: number
+}
+
+const dogURL = 'https://dog.ceo/api/breeds/image/random'
+const catURL = 'https://api.thecatapi.com/v1/images/search?limit=1'
+// const { result, loaded, loading } = useURLLoader<dogData>(dogURL)
+const { result, loaded, loading } = useURLLoader<catData[]>(catURL)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
   <h1>X: {{ x }}, Y: {{ y }}</h1>
+  <h1 v-if="loading">Loading.....</h1>
+  <img v-if="loaded" :src="result ? result[0].url : ''" />
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
   </p>
-
+  <teleport to="body">
+    <div class="modal" ref="refModal">12312312321</div>
+  </teleport>
   <p>
     See
     <code>README.md</code> for more information.
@@ -50,5 +73,20 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
+}
+
+.modal {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
 }
 </style>
