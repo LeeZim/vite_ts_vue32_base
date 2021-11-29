@@ -3,6 +3,8 @@ import { ref, defineProps } from 'vue'
 import useMousePosition from '@/hooks/useMousePosition'
 import useURLLoader from '@/hooks/useURLLoader'
 
+import MyModal from '@/components/MyModal.vue'
+
 defineProps<{ msg: string }>()
 const { x, y } = useMousePosition()
 const count = ref(0)
@@ -24,6 +26,12 @@ const dogURL = 'https://dog.ceo/api/breeds/image/random'
 const catURL = 'https://api.thecatapi.com/v1/images/search?limit=1'
 // const { result, loaded, loading } = useURLLoader<dogData>(dogURL)
 const { result, loaded, loading } = useURLLoader<catData[]>(catURL)
+
+const modalCtl = ref<'close' | 'open'>('close')
+
+const modalHandler = (isClose: boolean) => {
+  console.log(isClose)
+}
 </script>
 
 <template>
@@ -38,7 +46,8 @@ const { result, loaded, loading } = useURLLoader<catData[]>(catURL)
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
   </p>
   <teleport to="body">
-    <div class="modal" ref="refModal">12312312321</div>
+    <!-- <div class="modal" ref="refModal">12312312321</div> -->
+    <MyModal :is-open="modalCtl" @close-modal="modalHandler" />
   </teleport>
   <p>
     See
