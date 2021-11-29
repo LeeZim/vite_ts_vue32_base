@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { ElButton, ElSelect, ElLoading } from 'element-plus'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 import 'element-plus/theme-chalk/src/base.scss'
 
 const app = createApp(App)
@@ -17,5 +18,6 @@ plugins.forEach((plugin) => {
 })
 
 app.config.globalProperties.$ELEMENT = { size: 'small' }
+app.use(store)
 app.use(router)
 app.mount('#app')

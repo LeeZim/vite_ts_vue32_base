@@ -10,6 +10,10 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'off',
+    'no-unused-vars': 'off',
+    'no-console': 'off',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
     'import/extensions': [
       'error',
       'ignorePackages',
