@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <div class="modal">
-      <p>This is a Modal</p>
-      <button @click="handleClick">Click</button>
-    </div>
+  <!-- <div class="modal-container"> -->
+  <div class="modal">
+    <div class="modal-title">This is a Modal</div>
+    <button class="modal-button" @click="handleClick">Click</button>
   </div>
+  <!-- </div> -->
 </template>
 <script setup lang="ts">
-import { defineEmits, defineProps, PropType, onMounted } from 'vue'
+import { PropType, onUnmounted, defineProps, defineEmits } from 'vue'
 
 type StateType = 'close' | 'open'
 
@@ -23,15 +23,19 @@ const emits = defineEmits({
   'close-modal': null
 })
 
-const handleClick = (e: MouseEvent) => {
+const handleClick = () => {
   emits('close-modal', props.isOpen)
 }
+
+onUnmounted(() => {
+  console.log('unmounted')
+})
 </script>
 <style lang="stylus">
 .modal
   width 200px
   height 200px
-  position absolute
+  position fixed
   top 50%
   left 50%
   margin-top -100px
@@ -45,4 +49,19 @@ const handleClick = (e: MouseEvent) => {
   display flex
   justify-content center
   align-items center
+  flex-direction column
+
+.modal-title
+  font-size 22px
+  color #fff
+  height 60px
+
+.modal-button
+  border none
+  outline none
+  width 80px
+  height 30px
+  background-color #fff
+  border-radius 10px
+  cursor pointer
 </style>
