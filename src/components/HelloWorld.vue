@@ -27,6 +27,15 @@ onErrorCaptured((e: any) => {
 
 <template>
   <h1>{{ msg }}</h1>
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <div class="flex-shrink-0">
+      <div class="h-12 w-12 bg-red-500"></div>
+    </div>
+    <div>
+      <div class="text-xl font-medium text-black">ChitChat</div>
+      <p class="text-gray-500">You have a new message!</p>
+    </div>
+  </div>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -78,7 +87,7 @@ label {
 code {
   background-color: #eee;
   padding: 2px 4px;
-  border-radius: 4px;
+  border-radius: 0.25rem /* 4/16 */;
   color: #304455;
 }
 </style>

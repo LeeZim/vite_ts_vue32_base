@@ -12,7 +12,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 <style>
 body {
-  background-color: rgb(240, 124, 124);
+  /* background-color: rgb(240, 124, 124); */
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
