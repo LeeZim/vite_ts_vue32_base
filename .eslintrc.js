@@ -34,7 +34,7 @@ module.exports = {
     'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
       alias: {
-        map: [['@', './src']]
+        map: [['@/*', './src/*']]
       }
     }
   }

@@ -26,10 +26,6 @@ const emits = defineEmits({
 const handleClick = () => {
   emits('close-modal', props.isOpen)
 }
-
-onUnmounted(() => {
-  console.log('unmounted')
-})
 </script>
 <style lang="stylus">
 .modal
