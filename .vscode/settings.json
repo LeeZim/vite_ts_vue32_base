@@ -1,6 +1,6 @@
 {
     "[vue]": {
-        "editor.defaultFormatter": "johnsoncodehk.volar"
+        // "editor.defaultFormatter": "johnsoncodehk.volar"
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
@@ -13,5 +13,6 @@
     "typescript.tsdk": "node_modules/typescript/lib",
     "css.validate": false,
     "less.validate": false,
-    "scss.validate": false
-}
+    "scss.validate": false,
+    "html.format.wrapAttributes": "force-expand-multiline"
+  }

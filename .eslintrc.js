@@ -6,7 +6,11 @@ module.exports = {
     node: true
   },
   plugins: ['prettier', 'vue', '@typescript-eslint'],
-  extends: ['plugin:vue/vue3-strongly-recommended', 'airbnb-base', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:vue/vue3-strongly-recommended',
+    'airbnb-base',
+    'plugin:prettier/recommended'
+  ],
   rules: {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'off',
@@ -23,7 +27,8 @@ module.exports = {
         tsx: 'never'
       }
     ],
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    'global-require': 'off'
   },
   parserOptions: {
     ecmaVersion: 12,
