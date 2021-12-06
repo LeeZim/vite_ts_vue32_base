@@ -44,6 +44,7 @@
     }
   ],
   "currentUser": {
-    "isLogin": false
+    "isLogin": true,
+    "name": "viking"
   }
 }

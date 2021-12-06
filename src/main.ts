@@ -20,5 +20,5 @@ plugins.forEach((plugin) => {
 
 app.config.globalProperties.$ELEMENT = { size: 'small' }
 app.use(store)
-app.use(router)
+// app.use(router)
 app.mount('#app')

@@ -1,11 +1,12 @@
 <template>
   <div class="bg-blue-600 h-16">
-    <div class="container">
+    <div class="container" ref="containerDiv">
       <a href="#" class="logo">者也专栏</a>
       <div class="flex justify-center">
         <button class="btn" v-if="!user.isLogin">登录</button>
         <button class="btn" v-if="!user.isLogin">注册</button>
-        <button class="btn" v-if="user.isLogin">viking</button>
+        <!-- <button class="btn" v-if="user.isLogin">viking</button> -->
+        <DropdownList v-if="user.isLogin" :user-name="user.name" />
       </div>
     </div>
   </div>
@@ -21,12 +22,13 @@
 }
 
 .btn {
-  @apply hover:bg-white hover:text-blue-600 border border-white text-white rounded-md w-14 h-9 mr-3;
+  @apply hover:bg-white hover:text-blue-600 border border-white text-white rounded-md py-1 px-2 mr-3;
 }
 </style>
 
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
+import DropdownList from '@/components/DropdownList/DropdownList.vue'
 
 export interface UserProps {
   isLogin: boolean
