@@ -8,8 +8,6 @@
         >者也专栏</a
       >
       <div class="flex justify-center">
-        <!-- <button class="btn" v-if="!user.isLogin">登录</button>
-        <button class="btn" v-if="!user.isLogin">注册</button> -->
         <PrimaryButton class="mr-3" v-if="!user.isLogin">登录</PrimaryButton>
         <PrimaryButton v-if="!user.isLogin">注册</PrimaryButton>
         <DropdownList v-if="user.isLogin" :user-name="user.name">
@@ -17,7 +15,7 @@
           <DropdownItem>123123</DropdownItem>
           <DropdownItem>123123</DropdownItem>
           <DropdownItem>123123</DropdownItem>
-          <DropdownItem :disabled="true">123123</DropdownItem>
+          <DropdownItem disabled>123123</DropdownItem>
         </DropdownList>
       </div>
     </div>
