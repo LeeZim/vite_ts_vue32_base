@@ -1,21 +1,23 @@
 <template>
   <div class="dropdownList relative" ref="listRef">
-    <button
-      class="hover:bg-white hover:text-blue-600 border border-white text-white rounded-md mr-3 py-1 px-2"
-      @click="toggle"
-    >
+    <PrimaryButton @click="toggle">
       {{ userName }}
-      <div class="icon"></div>
-    </button>
+      <div class="icon" />
+    </PrimaryButton>
     <div
       v-show="isOpen"
-      class="w-40 h-10 absolute top-10 left-0 bg-yellow-600 p-3"
-    ></div>
+      class="w-36 absolute top-10 left-0 bg-white px-2 rounded-md border solid border-gray-300"
+    >
+      <ul class="text-left">
+        <slot></slot>
+      </ul>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { defineProps, ref, watch } from 'vue'
 import useClickOutside from '@/hooks/useClickOutside'
+import PrimaryButton from '@/components/PrimaryButton/PrimaryButton.vue'
 
 const props = defineProps({
   userName: {
